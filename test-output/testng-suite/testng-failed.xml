@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [testng-suite]">
+  <parameter name="boardTitle" value="First Board"/>
+  <parameter name="secondCardTitle" value="my second card"/>
+  <parameter name="cardDescription" value="This is the description of the card."/>
+  <parameter name="cardTitle" value="card one"/>
+  <test thread-count="5" name="test-case-1(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="trello.TrelloUsageTest">
+        <methods>
+          <include name="testDeletingCard"/>
+          <include name="testFileContent"/>
+          <include name="shutDown"/>
+          <include name="testDownloadFile" invocation-numbers="0"/>
+          <include name="clearTestSession"/>
+          <include name="prepareTestEnvironment"/>
+          <include name="testUserAction"/>
+        </methods>
+      </class> <!-- trello.TrelloUsageTest -->
+    </classes>
+  </test> <!-- test-case-1(failed) -->
+</suite> <!-- Failed suite [testng-suite] -->
