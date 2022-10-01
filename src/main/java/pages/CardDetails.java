@@ -76,7 +76,7 @@ public class CardDetails {
 				.findElement(By.xpath("//div[@class='description-content js-desc-content']/*/p"));
 		Thread.sleep(3000);
 
-		WebElement commentSection = this.driver.findElement(By.xpath("//textarea[@placeholder='Write a comment…']"));
+		WebElement commentSection = this.driver.findElement(By.xpath("//textarea[@aria-label='Write a comment']"));
 		Thread.sleep(3000);
 
 		this.actions = new Actions(driver);
