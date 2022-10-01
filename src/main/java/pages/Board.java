@@ -53,7 +53,7 @@ public class Board {
 
 	public void createCardWithTitle(String title) throws InterruptedException {
 		try {
-			this.screenshot.takeScreenshot("before_'" + title + "'_creation.jpg");
+			this.screenshot.takeScreenshot("before_" + title + "_creation.jpg");
 			if (CardDetails.cardsCnt > 0) {
 				WebElement addCardBtn = this.driver.findElement(By.linkText("Add a card"));
 				addCardBtn.click();
@@ -73,7 +73,7 @@ public class Board {
 			WebElement createCardBtn = this.driver.findElement(By.xpath("//input[@value='Add card']"));
 			createCardBtn.click();
 			Thread.sleep(3000);
-			this.screenshot.takeScreenshot("after_'" + title + "'_creation.jpg");
+			this.screenshot.takeScreenshot("after_" + title + "_creation.jpg");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

@@ -29,8 +29,10 @@ public class CardDetails {
 	}
 
 	public void writeCardDescription(String description) throws InterruptedException {
-		WebElement descriptionInput = this.wait.until(ExpectedConditions.visibilityOf(
-				this.driver.findElement(By.xpath("//textarea[@placeholder='Add a more detailed description…']"))));
+//		WebElement descriptionInput = this.wait.until(ExpectedConditions.visibilityOf(
+//				this.driver.findElement(By.xpath("//textarea[@placeholder='Add a more detailed description…']"))));
+		WebElement descriptionInput = this.wait.until(ExpectedConditions
+				.visibilityOf(this.driver.findElement(By.xpath("//div[@class='description-edit edit']/textarea"))));
 
 		descriptionInput.sendKeys(description);
 
